@@ -1,0 +1,3003 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "Bitstamp-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": ""
+	},
+	"item": [
+		{
+			"name": "Banking",
+			"item": [
+				{
+					"name": "user-balance-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/balance/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"balance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "conversion-rate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/eur_usd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"eur_usd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bank-withdrawal-create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "account_currency",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bic",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bank_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bank_address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bank_postal_code",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bank_city",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bank_country",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "iban",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/withdrawal/open/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"withdrawal",
+								"open",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bank-withdrawal-status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/withdrawal/status/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"withdrawal",
+								"status",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bank-withdrawal-cancel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/withdrawal/cancel/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"withdrawal",
+								"cancel",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdrawal-requests",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/withdrawal-requests/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"withdrawal-requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sub-account-transfer-from-main",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "subAccount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/transfer-from-main/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"transfer-from-main",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sub-account-transfer-to-main",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "subAccount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/transfer-to-main/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"transfer-to-main",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Trading",
+			"item": [
+				{
+					"name": "ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ticker/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ticker",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticker-hour",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ticker_hour/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ticker_hour",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order-book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/order_book/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"order_book",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/transactions/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"transactions",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trading-pairs-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/trading-pairs-info/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"trading-pairs-info",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ohlc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ohlc/btcusd/?step=14400&limit=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ohlc",
+								"btcusd",
+								""
+							],
+							"query": [
+								{
+									"key": "step",
+									"value": "14400"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trading-fees-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/fees/trading/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"fees",
+								"trading",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trading-fees-pair",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/fees/trading/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"fees",
+								"trading",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-balance-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/balance/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"balance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-balance-pair",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/balance/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"balance",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-transactions-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/user_transactions/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"user_transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-transactions-pair",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/user_transactions/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"user_transactions",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy-instant-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/buy/instant/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"buy",
+								"instant",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sell-instant-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/sell/instant/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"sell",
+								"instant",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy-limit-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "daily_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "ioc_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "fok_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "moc_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "gtd_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "expire_time",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "client_order_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "limit_price",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/buy/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"buy",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sell-limit-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "daily_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "ioc_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "fok_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "moc_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "gtd_order",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "expire_time",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "client_order_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/sell/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"sell",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy-market-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/buy/market/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"buy",
+								"market",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sell-market-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/sell/market/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"sell",
+								"market",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/cancel_order/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"cancel_order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel-all-orders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/cancel_all_orders/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"cancel_all_orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel-all-orders-pair",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/cancel_all_orders/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"cancel_all_orders",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order-status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/order_status/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"order_status",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "open-orders-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/open_orders/all/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"open_orders",
+								"all",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "open-orders-pair",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/open_orders/btcusd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"open_orders",
+								"btcusd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "websocket-token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/websockets_token/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"websockets_token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crypto Withdrawals",
+			"item": [
+				{
+					"name": "user-balance-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/balance/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"balance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crypto-transactions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/crypto-transactions/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"crypto-transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "btc-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/btc_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"btc_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ltc-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ltc_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ltc_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eth-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/eth_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"eth_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xlm-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "memo_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/xlm_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"xlm_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hbar-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "memo_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/hbar_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"hbar_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xrp-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "destination_tag",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/xrp_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"xrp_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bch-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/bch_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"bch_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ripple-iou-withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ripple_withdrawal/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ripple_withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crypto Deposits",
+			"item": [
+				{
+					"name": "user-balance-all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/balance/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"balance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crypto-transactions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/crypto-transactions/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"crypto-transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "btc-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/btc_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"btc_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "btc-unconfirmed-deposit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/btc_unconfirmed/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"btc_unconfirmed",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ltc-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ltc_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ltc_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eth-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/eth_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"eth_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xlm-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/xlm_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"xlm_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hbar-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/hbar_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"hbar_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xrp-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/xrp_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"xrp_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bch-deposit-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/bch_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"bch_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ripple-iou-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/ripple_address/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ripple_address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "liquidation-address-info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/liquidation_address/info/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"liquidation_address",
+								"info",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "liquidation-address-new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth",
+								"type": "text",
+								"value": "BITSTAMP {{apiKey}}"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "liquidation_currency",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address_format",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/liquidation_address/new/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"liquidation_address",
+								"new",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"//==================================//",
+					"//           Authentication         //",
+					"//==================================//",
+					"",
+					"var apiKey = pm.environment.get(\"apiKey\");",
+					"var apiSecret = pm.environment.get(\"apiSecret\");",
+					"var date = Math.floor(Date.now());",
+					"var nonce = \"4000000000000000\"+ (10000000000000000000+Math.floor(Math.random() * 90000000000000000000));",
+					"var baseUrl = pm.environment.get(\"baseUrl\").split('//')[1];",
+					"var payload_empty = pm.request.body.isEmpty();",
+					"",
+					"// Generate raw message",
+					"if (payload_empty === true) {",
+					"    var rawMessage = \"BITSTAMP\" + \" \" + apiKey + pm.request.method + baseUrl + pm.request.url.getPath() + nonce + date +\"v2\";",
+					"",
+					"} else if (payload_empty === false) {",
+					"    var rawMessage = \"BITSTAMP\" + \" \" + apiKey + pm.request.method + baseUrl + pm.request.url.getPath() +\"application/x-www-form-urlencoded\" + nonce + date +\"v2\" + pm.request.body;",
+					"}",
+					"",
+					"console.log(pm.request.url.getHost());",
+					"",
+					"// Generate HMAC SHA256 signature",
+					"var rawSignature = CryptoJS.HmacSHA256(rawMessage, apiSecret);",
+					"var signature = rawSignature.toString(CryptoJS.enc.Hex);",
+					"",
+					"pm.environment.set('nonce', nonce);",
+					"pm.environment.set('signature', signature);",
+					"pm.environment.set('date', date);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
